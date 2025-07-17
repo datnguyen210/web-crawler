@@ -71,4 +71,12 @@ func main() {
 
 	fmt.Printf("Title: %s\n", title)
 	fmt.Printf("Found %d links\n", len(links))
+
+	for i, link := range links {
+		if (i >= 10) {
+			fmt.Printf("...and %d more links\n", len(links) - 10)
+			break
+		}
+		fmt.Printf(" %d: %s\n", i + 1, link)
+	}
 }
